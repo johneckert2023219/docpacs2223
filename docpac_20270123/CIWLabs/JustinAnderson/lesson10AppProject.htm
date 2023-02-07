@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Lesson 10 Application Project</title>
+
+<script language="javascript">
+<!--
+    function validate(form) {
+      var cardNum = form.number.value;
+      var expMo = form.expMo.value;
+      var expYr = form.expYr.value;
+      var today = new Date();
+      var expDate = new Date(expYr, expMo);
+
+      if (expDate <= today) {
+        alert("Expiration date must be in the future");
+        return false;
+        }
+
+      if (!form.ccard[0].checked && !form.ccard[1].checked && !form.ccard[2].checked) {
+        alert("Please select a credit card type");
+        return false;
+      }
+
+      if (form.ccard[0].checked) {
+        if (cardNum.charAt(0) !== "4" || cardNum.length !== 16) {
+          alert("Visa card number must have 4 and 16 digits");
+          return false;
+       }
+      }
+
+    if (form.ccard[1].checked) {
+      if (cardNum.charAt(0) !== "5" || cardNum.length !== 16) {
+        alert("MasterCard number must have 5 and 16 digits");
+        return false;
+      }
+    }
+  if (form.ccard[2].checked) {
+    if (cardNum.charAt(0) !== "3" || cardNum.length !== 15) {
+      alert("American Express number must have with 3 and 15 digits");
+      return false;
+       }
+      }
+      alert("Credit card information is valid");
+      return true;
+    }
+//-->
+</script>
+
+</head>
+
+<body>
+
+<h3>CIW JavaScript Specialist</h3>
+<hr />
+<form name="ccForm">
+<p>
+<input type="radio" name="ccard" value="visa" />
+Visa
+</p>
+<p>
+<input type="radio" name="ccard" value="mc" />
+MasterCard
+</p>
+<p>
+<input type="radio" name="ccard" value="amex" />
+American Express
+</p>
+<p>
+Card #
+<input type="text" name="number" />
+</p>
+<p>
+Exp Date:
+<select name="expMo">
+<option value=0>Jan
+<option value=1>Feb
+<option value=2>Mar
+<option value=3>Apr
+<option value=4>May
+<option value=5>Jun
+<option value=6>Jul
+<option value=7>Aug
+<option value=8>Sep
+<option value=9>Oct
+<option value=10>Nov
+<option value=11>Dec
+</select>
+<select name="expYr">
+<option value=2025>2025
+<option value=2030>2030
+<option value=2035>2035
+<option value=2040>2040
+<option value=2045>2045
+<option value=2050>2050
+<option value=2055>2055
+<option value=2060>2060
+</select>
+</p>
+
+<input type="button" value="Check Form" onClick="validate(this.form);" />
+<input type="reset" value="Reset Form" />
+</form>
+
+</body>
+</html>
