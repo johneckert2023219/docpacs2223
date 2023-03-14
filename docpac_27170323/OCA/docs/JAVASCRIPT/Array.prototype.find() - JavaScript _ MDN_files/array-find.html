@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!-- saved from url=(0069)https://interactive-examples.mdn.mozilla.net/pages/js/array-find.html -->
+<html lang="en" class="js"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>JavaScript Demo: Array.find()</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="./codemirror-5-50-2.css" rel="stylesheet">
+  <link href="./editor-js.css" rel="stylesheet">
+  
+</head>
+
+<body>
+  <section id="static" class="hidden">
+    <pre><code id="static-js" data-height="shorter">const array1 = [5, 12, 8, 130, 44];
+
+const found = array1.find(element =&gt; element &gt; 10);
+
+console.log(found);
+// expected output: 12
+</code></pre>
+  </section>
+
+  <section id="live" class="live">
+    <header class="output-header full-border">
+      <h4 class="output-heading">JavaScript Demo: Array.find()</h4>
+    </header>
+    <div id="editor" class="editor shorter"><div class="CodeMirror cm-s-default" translate="no"><div class="CodeMirror-vscrollbar" tabindex="-1" cm-not-content="true"><div style="min-width: 1px; height: 0px;"></div></div><div class="CodeMirror-hscrollbar" tabindex="-1" cm-not-content="true"><div style="height: 100%; min-height: 1px; width: 0px;"></div></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 30px; margin-bottom: -17px; border-right-width: 33px; min-height: 124px; min-width: 399.719px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre class="CodeMirror-line-like"><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-cursors"></div><div class="CodeMirror-code" role="presentation" contenteditable="true" autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style=""><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" aria-hidden="true" contenteditable="false" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">1</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">const</span> <span class="cm-def">array1</span> <span class="cm-operator">=</span> [<span class="cm-number">5</span>, <span class="cm-number">12</span>, <span class="cm-number">8</span>, <span class="cm-number">130</span>, <span class="cm-number">44</span>];</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" aria-hidden="true" contenteditable="false" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">2</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" aria-hidden="true" contenteditable="false" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">3</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">const</span> <span class="cm-def">found</span> <span class="cm-operator">=</span> <span class="cm-variable">array1</span>.<span class="cm-property">find</span>(<span class="cm-def">element</span> <span class="cm-operator">=&gt;</span> <span class="cm-variable-2">element</span> <span class="cm-operator">&gt;</span> <span class="cm-number">10</span>);</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" aria-hidden="true" contenteditable="false" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">4</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" aria-hidden="true" contenteditable="false" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">5</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">console</span>.<span class="cm-property">log</span>(<span class="cm-variable">found</span>);</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" aria-hidden="true" contenteditable="false" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">6</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">// expected output: 12</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" aria-hidden="true" contenteditable="false" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">7</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre></div></div></div></div></div></div><div style="position: absolute; height: 33px; width: 1px; border-bottom: 0px solid transparent; top: 124px;"></div><div class="CodeMirror-gutters" style="height: 157px;"><div class="CodeMirror-gutter CodeMirror-linenumbers" style="width: 29px;"></div></div></div></div></div>
+
+    <div class="output-container">
+      <div class="buttons-container">
+        <button id="execute" class="button run" type="button">Run ›</button>
+        <button id="reset" type="button" class="button">Reset</button>
+      </div>
+      <div id="console" class="output"><code></code></div>
+    </div>
+  </section>
+
+  
+
+  <script src="./codemirror-5-50-2.js.download"></script>
+  <script src="./editor-js.js.download"></script>
+<script type="text/javascript" src="./inject.js(1).download"></script>
+
+
+</body></html>

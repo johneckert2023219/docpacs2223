@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+</head>
+
+<body>
+  <p>
+    <a href="/">New Order</a>
+  </p>
+  <% var qty = 0; %>
+  <% var profit = 0; %>
+
+  <% for (let i = 0; i < orders.length; i++) { %>
+  <table border=1>
+    <tr>
+      <td colspan=7><%= orders[i].customerName %></td>
+    </tr>
+    <tr>
+      <td colspan=7><%= orders[i].customerAddress %></td>
+    </tr>
+    <tr>
+      <td colspan=7><%= orders[i].orderDate %></td>
+    </tr>
+    <% for (let j = 0; j < orders[i].items.length; j++) { %>
+    <tr>
+      <td>Title</td>
+      <td>Unit</td>
+      <td>Retail</td>
+      <td>Profit Per</td>
+      <td>Quantity</td>
+      <td>Subtotal</td>
+      <td>Sales Tax</td>
+    </tr>
+    <tr>
+      <td><%= orders[i].items[j].name %></td>
+      <td><%= orders[i].items[j].unit %></td>
+      <td><%= orders[i].items[j].retail %></td>
+      <td><%= orders[i].items[j].profit %></td>
+      <% profit+=orders[i].items[j].profit %>
+      <td><%= orders[i].items[j].qty %></td>
+      <% qty+=orders[i].items[j].qty %>
+      <td><%= orders[i].items[j].subtotal %></td>
+      <td><%= orders[i].items[j].salesTax %></td>
+    </tr>
+    <% } %>
+    <tr>
+      <td colspan=4>Shipping</td>
+      <td colspan=3><%= orders[i].shipping %></td>
+    </tr>
+    <tr>
+      <td colspan=4>Total</td>
+      <td colspan=3><%= orders[i].total %></td>
+    </tr>
+  </table>
+  <% } %>
+  <b>Units Sold Today: </b> <%= qty %><br>
+  <b>Total Profit Today: </b> <%= profit %>
+
+</body>
+
+</html>
