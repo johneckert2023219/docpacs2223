@@ -21,12 +21,12 @@ const salesTax = 0.06;
 class Item {
   constructor(name, itemUnitPrice, qty) {
     this.name = name;
-    this.unit = itemUnitPrice;
-    this.retail = this.unit * (1 + retailMarkup);
-    this.profit = this.retail - this.unit;
+    this.unit = Math.round(itemUnitPrice * 100) / 100;
+    this.retail = Math.round((this.unit * (1 + retailMarkup) * 100)) / 100;
+    this.profit = Math.round((this.retail - this.unit) * 100) / 100;
     this.qty = qty;
-    this.subtotal = this.retail * this.qty;
-    this.salesTax = this.subtotal * salesTax;
+    this.subtotal = Math.round((this.retail * this.qty) * 100) / 100;
+    this.salesTax = Math.round((this.subtotal * salesTax) * 100) / 100;
   }
 }
 
